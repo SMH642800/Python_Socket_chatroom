@@ -31,10 +31,10 @@ filename = ''
 filename_short = ''
 file_transfer_waiting = False
 
-HOST = "127.0.0.1"
+HOST = "127.111.0.1"
 PORT = 12345
 
-MCAST_GRP = '224.1.1.1'
+MCAST_GRP = '224.111.1.1'
 MCAST_PORT = 5007
 
 # ========================================= Tkinter Login and Main windows =============================================
