@@ -19,6 +19,8 @@ chat_history = None
 
 server = None
 
+application = None
+
 
 # =========================================== Loading register users data ==============================================
 
@@ -122,6 +124,8 @@ class Handler(socketserver.BaseRequestHandler):
                             encryption.send(Handler.clients[user].request, {'type': 'peer_joined', 'peer': self.user})
                         Handler.clients[self.user] = self
 
+                        print("USER: " + self.user + " --> Socket: " + str(Handler.clients[self.user].request))
+
                         # multicast to all online client
                         multicast(self.user)
 
@@ -202,9 +206,8 @@ class Handler(socketserver.BaseRequestHandler):
                 encryption.send(Handler.clients[user].request, {'type': 'peer_left', 'peer': self.user})
 
 
-if __name__ == '__main__':
-
-    # global server
+def main():
+    global server, users, chat_history, application
 
     print("Server running...")
 
@@ -218,3 +221,7 @@ if __name__ == '__main__':
 
     application = socketserver.ThreadingTCPServer((HOST, PORT), Handler)
     application.serve_forever()
+
+
+if __name__ == '__main__':
+    main()

@@ -86,7 +86,7 @@ class LoginWin:
         # Display Login and register button
         self.button_login = tk.Button(self.window)
         self.button_login.place(relx=0.2, rely=0.65, height=28, width=70)
-        self.button_login.configure(text='Sign in', font=("Arial", 12), bg='light slate gray')
+        self.button_login.configure(text='Login', font=("Arial", 12), bg='light slate gray')
         self.button_register = tk.Button(self.window)
         self.button_register.place(relx=0.6, rely=0.65, height=28, width=70)
         self.button_register.configure(text='Register', font=("Arial", 12), bg='light slate gray')
@@ -203,7 +203,6 @@ def on_button_login_clicked():
             username = login_window.username.get()
             login_window.destroy()
             main_window = MainWin()
-            # main_window.turn_off = close_socket()
 
             # initialize main_window state
             main_window.username.set(username)
@@ -212,6 +211,9 @@ def on_button_login_clicked():
             main_window.username_list.bind('<<ListboxSelect>>', online_session_select)
             encryption.send(client_socket, {'cmd': 'get_users'})
             encryption.send(client_socket, {'cmd': 'get_history', 'peer': ''})
+
+            # get client_socket information
+            print(client_socket)
 
             # open UDP socket
             udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
