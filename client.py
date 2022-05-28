@@ -212,9 +212,6 @@ def on_button_login_clicked():
             encryption.send(client_socket, {'cmd': 'get_users'})
             encryption.send(client_socket, {'cmd': 'get_history', 'peer': ''})
 
-            # get client_socket information
-            print(client_socket)
-
             # open UDP socket
             udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
             udp_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -228,6 +225,9 @@ def on_button_login_clicked():
             recv_tcp_thread = threading.Thread(target=recv_tcp_async, args=())
             recv_tcp_thread.setDaemon(True)
             recv_tcp_thread.start()
+
+            # get client_socket information
+            print(client_socket)
 
             # show the chat window
             main_window.show()

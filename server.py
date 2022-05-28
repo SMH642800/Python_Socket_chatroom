@@ -124,6 +124,7 @@ class Handler(socketserver.BaseRequestHandler):
                             encryption.send(Handler.clients[user].request, {'type': 'peer_joined', 'peer': self.user})
                         Handler.clients[self.user] = self
 
+                        # get connected client's socket information
                         print("USER: " + self.user + " --> Socket: " + str(Handler.clients[self.user].request))
 
                         # multicast to all online client
