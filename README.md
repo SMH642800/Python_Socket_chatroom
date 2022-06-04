@@ -12,6 +12,7 @@
 
 ## 3. 執行畫面
 - 帳號註冊及登錄畫面:
+    
     ![](https://i.imgur.com/kzLccDv.png)
     
 - 聊天室主畫面:
@@ -252,27 +253,49 @@
 
 ## 5. 參考資料
 [1. How do you UDP multicast in Python?](https://stackoverflow.com/questions/603852/how-do-you-udp-multicast-in-python)
+
 [2. 為應用程式設計圖形化介面，使用Python Tkinter 模組](https://www.rs-online.com/designspark/python-tkinter-cn)
+
 [3. 如何使用按鈕設定 Tkinter 文字控制元件的文字](https://www.delftstack.com/zh-tw/howto/python-tkinter/how-to-set-text-of-tkinter-text-widget-by-using-a-button/)
+
 [4. Python - Tkinter Text](https://www.tutorialspoint.com/python/tk_text.htm)
+
 [5. How to avoid tkinter "ListboxSelect" and .curselection() detecting events/selection outside of Listbox?](https://stackoverflow.com/questions/48676325/how-to-avoid-tkinter-listboxselect-and-curselection-detecting-events-sele)
+
 [6. Python tkinter filedialog 開啟檔案對話框](https://shengyu7697.github.io/python-tkinter-filedialog/)
+
 [7. What is the difference between \ and \\\ in file path](https://stackoverflow.com/questions/15969608/what-is-the-difference-between-and-in-file-path)
+
 [8. Python UDP Server/Client 網路通訊教學](https://shengyu7697.github.io/python-udp-socket/)
+
 [9. Python time 時間模組使用教學與範例](https://officeguide.cc/python-time-tutorial-examples/)
+
 [10. time — Time access and conversions](https://docs.python.org/3/library/time.html#time.strftime)
+
 [11. Python資料儲存：pickle模組的使用](https://www.796t.com/content/1541722469.html)
+
 [12. Day11 - Python 如何處理 JSON](https://ithelp.ithome.com.tw/articles/10220160)
+
 [13. struct--- 將字節串解讀為打包的二進制數據](https://docs.python.org/zh-cn/3/library/struct.html)
+
 [14. Python 3的f-Strings：增強的字串格式語法（指南）](https://iter01.com/585538.html)
+
 [15. Python 以 PyCryptodome 實作 AES 對稱式加密方法教學與範例](https://officeguide.cc/python-pycryptodome-aes-symmetric-encryption-tutorial-examples/)
+
 [16. Encrypt & Decrypt using PyCrypto AES 256](https://stackoverflow.com/questions/12524994/encrypt-decrypt-using-pycrypto-aes-256)
+
 [17. Python Crypto.Random類代碼示例](https://vimsky.com/zh-tw/examples/detail/python-ex-Crypto-Random---class.html)
+
 [18. Python 計算 MD5 與 SHA 雜湊教學與範例](https://blog.gtwang.org/programming/python-md5-sha-hash-functions-tutorial-examples/)
+
 [19. How To Use Images as Backgrounds in Tkinter?](https://www.geeksforgeeks.org/how-to-use-images-as-backgrounds-in-tkinter/)
+
 [20. How to change font and size of buttons in Tkinter Python](https://stackhowto.com/how-to-change-font-and-size-of-buttons-in-tkinter-python/)
+
 [21. Python tkinter Entry 文字輸入框用法與範例](https://shengyu7697.github.io/python-tkinter-entry/)
+
 [22. Python 內建 GUI 模組 tkinter 測試 (三) : 版面管理員](http://yhhuang1966.blogspot.com/2018/10/python-gui-tkinter_12.html)
+
 
 ---
 
