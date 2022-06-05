@@ -323,9 +323,9 @@ def online_session_select(event):
 
         if index != 0:
             # set the new message icon('( new)') at the end of the sender
-            if current_connect_session != widget.get(index).rstrip(' (new)'):
+            if current_connect_session != widget.get(index).rstrip(' (*)'):
                 changed = True
-                current_connect_session = widget.get(index).rstrip(' (new)')
+                current_connect_session = widget.get(index).rstrip(' (*)')
                 if not file_transfer_waiting:
                     main_window.button_send_file.configure(state='normal')
                 main_window.username.set('%s -> %s' % (username, current_connect_session))
@@ -359,7 +359,7 @@ def refresh_username_list():
     for user in users.keys():
         name = "公頻聊天室" if user == '' else user
         if users[user]:
-            name += ' (new)'
+            name += ' (*)'
         main_window.username_list.insert('end', name)
 
 
@@ -367,7 +367,6 @@ def close_socket():
     encryption.send(client_socket, {'cmd': 'close'})
     client_socket.shutdown(2)
     client_socket.close()
-
     udp_socket.close()
 
 
@@ -451,7 +450,7 @@ def recv_tcp_async():
                 refresh_username_list()
 
         # broadcast
-        if data['type'] == 'broadcast':
+        elif data['type'] == 'broadcast':
             if current_connect_session == '':
                 append_message_to_history(data['peer'],
                                           time.strftime('%m/%d %Y - %H:%M:%S', time.localtime(time.time()))
